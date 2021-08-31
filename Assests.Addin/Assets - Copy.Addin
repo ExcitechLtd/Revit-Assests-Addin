@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Assets Revit Add-in</Name>
+    <Assembly>C:\Users\Graham Haigh\Documents\Visual Studio 2017\Projects\Assests.Addin\Assests.Addin\bin\Debug\Assets.Addin.dll</Assembly>
+    <FullClassName>Assets.Addin.Ribbon</FullClassName>
+    <ClientId>8861A7D2-A37F-4C0C-A46B-3A6A54DEA90A</ClientId>
+    <VendorId>Excitech</VendorId>
+    <VendorDescription>Excitech, http://www.excitech.co.uk</VendorDescription>
+  </AddIn>
+</RevitAddIns>

@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.57.0.0\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.57.0.0\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.57.0.0\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.57.0.0\build\CefSharp.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9A7727C-E40A-4FA7-8BD8-CF68A18170FB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Assets.Addin</RootNamespace>
+    <AssemblyName>Assets.Addin</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Assets.Addin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Assets.Addin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RestSharp, Version=106.11.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.11.7\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPI">
+      <HintPath>References\RevitAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>References\RevitAPIUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AssetInformation.vb" />
+    <Compile Include="Classes\Commands\AddAssets.vb" />
+    <Compile Include="Classes\Commands\AddCategory.vb" />
+    <Compile Include="Classes\Commands\DeleteAssets.vb" />
+    <Compile Include="Classes\Forge\AssetDeleteList.vb" />
+    <Compile Include="Classes\Forge\StatusSetList.vb" />
+    <Compile Include="Classes\Forge\UpdateAsset.vb" />
+    <Compile Include="Classes\LocalAssetInformation\AssetElementInfo.vb" />
+    <Compile Include="Classes\LocalAssetInformation\AssetProjectInformation.vb" />
+    <Compile Include="Classes\Commands\ConnectToBIM360.vb" />
+    <Compile Include="Classes\Commands\CreateBimAssets.vb" />
+    <Compile Include="Classes\Commands\Read.vb" />
+    <Compile Include="Classes\Commands\SyncBimAssets.vb" />
+    <Compile Include="Classes\Commands\ViewCategorys.vb" />
+    <Compile Include="Classes\Commands\ViewDoorAssets.vb" />
+    <Compile Include="Classes\FamilyHelper.vb" />
+    <Compile Include="Classes\Forge\ForgeAsset.vb" />
+    <Compile Include="Classes\Forge\ForgeAttribute.vb" />
+    <Compile Include="Classes\Forge\ForgeCategory.vb" />
+    <Compile Include="Classes\Forge\ForgeConnection.vb" />
+    <Compile Include="Classes\Forge\ForgeHub.vb" />
+    <Compile Include="Classes\Forge\ForgeProject.vb" />
+    <Compile Include="Classes\Forge\ForgeStatus.vb" />
+    <Compile Include="Classes\Forge\ForgeStatusStep.vb" />
+    <Compile Include="Classes\Forge\NewForgeAssets.vb" />
+    <Compile Include="Classes\Forge\NewForgeCategory.vb" />
+    <Compile Include="Classes\Forge\StatusSetCategoryList.vb" />
+    <Compile Include="Classes\Forge\StatusStep.vb" />
+    <Compile Include="Classes\LocalAssetInformation\AssetProjectSettings.vb" />
+    <Compile Include="Classes\modelCategory.vb" />
+    <Compile Include="Classes\Modules\SharedObjects.vb" />
+    <Compile Include="Classes\settings.vb" />
+    <Compile Include="Forms\frmAddAssetsToBim.Designer.vb">
+      <DependentUpon>frmAddAssetsToBim.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmAddAssetsToBim.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmCreateNewCategory.Designer.vb">
+      <DependentUpon>frmCreateNewCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmCreateNewCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDeleteAssets.Designer.vb">
+      <DependentUpon>frmDeleteAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDeleteAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmModelAssets.Designer.vb">
+      <DependentUpon>frmModelAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmModelAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmProgress.Designer.vb">
+      <DependentUpon>frmProgress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmProgress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSchedules.Designer.vb">
+      <DependentUpon>frmSchedules.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSchedules.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmBrowser.Designer.vb">
+      <DependentUpon>frmBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmBrowser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectBIMCategory.Designer.vb">
+      <DependentUpon>frmSelectBIMCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectBIMCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectBIMProject.Designer.vb">
+      <DependentUpon>frmSelectBIMProject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectBIMProject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSelectElementParamaters.Designer.vb">
+      <DependentUpon>frmSelectElementParamaters.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSelectElementParamaters.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmViewBIMAssets.Designer.vb">
+      <DependentUpon>frmViewBIMAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmViewBIMAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ribbon.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\frmAddAssetsToBim.resx">
+      <DependentUpon>frmAddAssetsToBim.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmCreateNewCategory.resx">
+      <DependentUpon>frmCreateNewCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDeleteAssets.resx">
+      <DependentUpon>frmDeleteAssets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmModelAssets.resx">
+      <DependentUpon>frmModelAssets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmProgress.resx">
+      <DependentUpon>frmProgress.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSchedules.resx">
+      <DependentUpon>frmSchedules.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmBrowser.resx">
+      <DependentUpon>frmBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectBIMCategory.resx">
+      <DependentUpon>frmSelectBIMCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectBIMProject.resx">
+      <DependentUpon>frmSelectBIMProject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSelectElementParamaters.resx">
+      <DependentUpon>frmSelectElementParamaters.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmViewBIMAssets.resx">
+      <DependentUpon>frmViewBIMAssets.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Assets.Addin">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="References\RevitAPI.dll" />
+    <Content Include="References\RevitAPIUI.dll" />
+    <Content Include="Resources\add assets_24.png" />
+    <Content Include="Resources\add category_24.png" />
+    <Content Include="Resources\bFett_24.png" />
+    <Content Include="Resources\delete assets_24.png" />
+    <Content Include="Resources\login bim360_24.png" />
+    <Content Include="Resources\sync from_24.png" />
+    <Content Include="Resources\sync to_24.png" />
+    <None Include="Resources\R2D2_24.png" />
+    <None Include="Resources\mFalcon_24.png" />
+    <None Include="Resources\dstar_24.png" />
+    <None Include="Resources\atat_24.png" />
+    <None Include="Resources\xwing_24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="..\packages\cef.redist.x64.3.2987.1601\build\cef.redist.x64.targets" Condition="Exists('..\packages\cef.redist.x64.3.2987.1601\build\cef.redist.x64.targets')" />
+</Project>
